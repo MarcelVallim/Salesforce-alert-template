@@ -1,0 +1,11 @@
+<template>
+    <div class={sldsNotify} lwc:if={showComponent}>
+        <span class="slds-assistive-text">{selectedOption}</span>
+        <lightning-icon icon-name={iconName} alternative-text={selectedOption} variant={iconVariant} size="x-small"></lightning-icon>
+        <h2>&nbsp; {message} &nbsp;</h2>
+
+        <template lwc:if={showLink}>            
+            <a role="button" onclick={handleShowModal} href="#">More Information</a>
+        </template>
+    </div>
+</template>

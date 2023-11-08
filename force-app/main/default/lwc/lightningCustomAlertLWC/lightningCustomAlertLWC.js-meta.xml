@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>[CK] Custom Alert for Record Pages</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="message" type="String" default="Insert your message" label="Enter the message" description='Message to be displayed' />
+            <property name="selectedOption" type="String" label="Selected Option" datasource="Warning,Error,Success,Starred,Info, Announcement" description='Which type of alert should be displayed, the color changes related to the level of alert' />
+            <property name="criteria" type="String" label="Add a criteria in SOQL format"  description='Include the criteria if the "Set Component Visibility" is not enough. E.g.: "CloseDate > TODAY"'/>
+            <property name="showLink" type="Boolean" label="More Information" />
+            <property name="more" type="String" label="More Information" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
